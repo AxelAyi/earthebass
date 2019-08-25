@@ -16,6 +16,7 @@ namespace EarTheBass
         private int score;
         private AudioSource source;
         private bool testDone = false;
+        private bool playFirstFound = true;
 
         void Start() {
             source = GetComponent<AudioSource>();
@@ -39,12 +40,13 @@ namespace EarTheBass
             }
             else {
                 NoteSound noteSound;
-                if (Random.Range(0,2) > 0) { 
-                    noteSound = soundManager.sounds.Last(x => x.note == note);
-                }
-                else {
+                if (playFirstFound) { 
                     noteSound = soundManager.sounds.First(x => x.note == note);
                 }
+                else {
+                    noteSound = soundManager.sounds.Last(x => x.note == note);
+                }
+                playFirstFound = !playFirstFound;
                 source.Stop();
                 source.PlayOneShot(noteSound.sound);
 
