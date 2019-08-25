@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 9b9d1ede1ccbe4e3e931b8a028c38bd7
+  - enabled: 1
+    path: Assets/Scenes/GuessNotes.unity
+    guid: e3a97fe8083de49c1b60902b0c2d9a30
   m_configObjects: {}
