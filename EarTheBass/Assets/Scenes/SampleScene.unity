@@ -1,0 +1,576 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &229817060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 229817062}
+  - component: {fileID: 229817061}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &229817061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229817060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8279b76f4c0c64ecb87b5f1b5989b2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - note: 4
+    stringId: 0
+    fretId: 0
+    sound: {fileID: 8300000, guid: b86aeafece45a40f3a50a7c59f78b821, type: 3}
+  - note: 5
+    stringId: 0
+    fretId: 1
+    sound: {fileID: 8300000, guid: 80651f1ad35464a3aaf6b2fcc6f2ba7a, type: 3}
+  - note: 6
+    stringId: 0
+    fretId: 2
+    sound: {fileID: 8300000, guid: 0558d7fcdbea649d288e2668d42315fd, type: 3}
+  - note: 7
+    stringId: 0
+    fretId: 3
+    sound: {fileID: 8300000, guid: 9261588b7d04642c0aff37cee640a71a, type: 3}
+  - note: 8
+    stringId: 0
+    fretId: 4
+    sound: {fileID: 8300000, guid: 40791279c310c4eb9a482349bfcc9b18, type: 3}
+  - note: 9
+    stringId: 0
+    fretId: 5
+    sound: {fileID: 8300000, guid: a379e4fe51786422c88b535e06cf7d1e, type: 3}
+  - note: 10
+    stringId: 0
+    fretId: 6
+    sound: {fileID: 8300000, guid: 4938af42e7c1945869b1caa84e5f63dc, type: 3}
+  - note: 11
+    stringId: 0
+    fretId: 7
+    sound: {fileID: 8300000, guid: deead2ad3fe0045aba1d9e747b93e937, type: 3}
+  - note: 0
+    stringId: 0
+    fretId: 8
+    sound: {fileID: 8300000, guid: d82b8ee5933fd444bb2438814dad13e3, type: 3}
+  - note: 1
+    stringId: 0
+    fretId: 9
+    sound: {fileID: 8300000, guid: 6fc18a8a7ed7844a6960b111c3603289, type: 3}
+  - note: 2
+    stringId: 0
+    fretId: 10
+    sound: {fileID: 8300000, guid: 62411f576d7f7476c9b81b69fe3181f4, type: 3}
+  - note: 3
+    stringId: 0
+    fretId: 11
+    sound: {fileID: 8300000, guid: 06ea9e018436d461f8fb9c75b802b2f2, type: 3}
+  - note: 4
+    stringId: 0
+    fretId: 11
+    sound: {fileID: 8300000, guid: ecc44a37c9c5d4abcbb133014961ad75, type: 3}
+  - note: 5
+    stringId: 0
+    fretId: 13
+    sound: {fileID: 8300000, guid: d9264cb3489c64f61b3d12831889a757, type: 3}
+  - note: 6
+    stringId: 0
+    fretId: 14
+    sound: {fileID: 8300000, guid: ef3ee68f5601a40578cdfa1931bd980e, type: 3}
+  - note: 7
+    stringId: 0
+    fretId: 15
+    sound: {fileID: 8300000, guid: 806c6b8b7588e424fa549dfa71c12efa, type: 3}
+  - note: 8
+    stringId: 0
+    fretId: 16
+    sound: {fileID: 8300000, guid: 0e3eddfebd4e54af3ba5b47f01302525, type: 3}
+  - note: 9
+    stringId: 0
+    fretId: 17
+    sound: {fileID: 8300000, guid: 612fbe7cca5774bc887404da3ba2cef5, type: 3}
+  - note: 10
+    stringId: 0
+    fretId: 18
+    sound: {fileID: 8300000, guid: 1aa54e69f77274be1aa0fb67ea0b9fda, type: 3}
+  - note: 11
+    stringId: 0
+    fretId: 19
+    sound: {fileID: 8300000, guid: ca2b258e97d2f42949b79520328f04a4, type: 3}
+  - note: 0
+    stringId: 0
+    fretId: 20
+    sound: {fileID: 8300000, guid: 0f30aaea021d142b290c4dde83ed5515, type: 3}
+  - note: 9
+    stringId: 1
+    fretId: 0
+    sound: {fileID: 8300000, guid: 044fc380b66d74c5ab2898dfc30e658d, type: 3}
+  - note: 10
+    stringId: 1
+    fretId: 1
+    sound: {fileID: 8300000, guid: 2e5ed238490964ccf928bfbb4f33eeb1, type: 3}
+  - note: 11
+    stringId: 1
+    fretId: 2
+    sound: {fileID: 8300000, guid: 1caa3e52364eb4758b4245a93027a744, type: 3}
+  - note: 0
+    stringId: 1
+    fretId: 3
+    sound: {fileID: 8300000, guid: 6d56405a914b64e7889058bd046338e0, type: 3}
+  - note: 1
+    stringId: 1
+    fretId: 4
+    sound: {fileID: 8300000, guid: 91fa4243ea9d945839e42eaac44bae92, type: 3}
+  - note: 2
+    stringId: 1
+    fretId: 5
+    sound: {fileID: 8300000, guid: c0c920797dfaa4ad0b1ca4952f11f3ab, type: 3}
+  - note: 3
+    stringId: 1
+    fretId: 6
+    sound: {fileID: 8300000, guid: e387d3b6f928f4ed59491f0295a43aaf, type: 3}
+  - note: 4
+    stringId: 1
+    fretId: 7
+    sound: {fileID: 8300000, guid: 4bbd2257327ad45cdb01a7a11059dd4f, type: 3}
+  - note: 5
+    stringId: 1
+    fretId: 8
+    sound: {fileID: 8300000, guid: ea8d3aed374714a6e936caac79a1994b, type: 3}
+  - note: 6
+    stringId: 1
+    fretId: 9
+    sound: {fileID: 8300000, guid: da615b175b0f84cacbdb488586b8dab2, type: 3}
+  - note: 7
+    stringId: 1
+    fretId: 10
+    sound: {fileID: 8300000, guid: 8deb2e04909894f9a87ab836b79b156e, type: 3}
+  - note: 8
+    stringId: 1
+    fretId: 11
+    sound: {fileID: 8300000, guid: 69d7189ece16c476797c371033ad5b84, type: 3}
+  - note: 9
+    stringId: 1
+    fretId: 12
+    sound: {fileID: 8300000, guid: fcad6add4d8d343d4bce48198f900fd9, type: 3}
+  - note: 10
+    stringId: 1
+    fretId: 13
+    sound: {fileID: 8300000, guid: 66c7bf5dd23e3433aae41123110a8448, type: 3}
+  - note: 11
+    stringId: 1
+    fretId: 14
+    sound: {fileID: 8300000, guid: 66db8556820bc47199b28aa3799f11a8, type: 3}
+  - note: 0
+    stringId: 1
+    fretId: 15
+    sound: {fileID: 8300000, guid: 764581af3712b4f399f4b2615385ff0c, type: 3}
+  - note: 1
+    stringId: 1
+    fretId: 16
+    sound: {fileID: 8300000, guid: 4a2a0aee89126405f9fbf9484bab8643, type: 3}
+  - note: 2
+    stringId: 1
+    fretId: 17
+    sound: {fileID: 8300000, guid: 7110777966f1443f1b02cdcad6d8fb0b, type: 3}
+  - note: 3
+    stringId: 1
+    fretId: 18
+    sound: {fileID: 8300000, guid: bfa0ae683fd0b4aa5aeded88428734ff, type: 3}
+  - note: 4
+    stringId: 1
+    fretId: 19
+    sound: {fileID: 8300000, guid: e10c0dff2530f437bbf72fe9c6e48ffe, type: 3}
+  - note: 5
+    stringId: 1
+    fretId: 20
+    sound: {fileID: 8300000, guid: d9a249f93c42d4852a9079636f36d015, type: 3}
+  - note: 2
+    stringId: 2
+    fretId: 0
+    sound: {fileID: 8300000, guid: 19248cb3f34ae4830a88bc339d8e4d0f, type: 3}
+  - note: 3
+    stringId: 2
+    fretId: 1
+    sound: {fileID: 8300000, guid: d46ed3e0e98cd4ee294161dbfc29663b, type: 3}
+  - note: 4
+    stringId: 2
+    fretId: 2
+    sound: {fileID: 8300000, guid: 440410f7508dd47e78a456aa2fc86726, type: 3}
+  - note: 5
+    stringId: 2
+    fretId: 3
+    sound: {fileID: 8300000, guid: cde178b16c32e4def88524c4a7eb0c5b, type: 3}
+  - note: 6
+    stringId: 2
+    fretId: 4
+    sound: {fileID: 8300000, guid: 5c2e3285251f5453bad654e89eb24790, type: 3}
+  - note: 7
+    stringId: 2
+    fretId: 5
+    sound: {fileID: 8300000, guid: a2486fc474d2e452096aa0d4b0671e7b, type: 3}
+  - note: 8
+    stringId: 2
+    fretId: 6
+    sound: {fileID: 8300000, guid: b107cb31f6cb74a8cb12c474b68832f9, type: 3}
+  - note: 9
+    stringId: 2
+    fretId: 7
+    sound: {fileID: 8300000, guid: cc7f0803bf94040c09b5e6e659855109, type: 3}
+  - note: 10
+    stringId: 2
+    fretId: 8
+    sound: {fileID: 8300000, guid: a347cbf659123421e8c0f9d7485ee4c8, type: 3}
+  - note: 11
+    stringId: 2
+    fretId: 9
+    sound: {fileID: 8300000, guid: 384e96f67e74a401bbf4e0369d72c7e4, type: 3}
+  - note: 0
+    stringId: 2
+    fretId: 10
+    sound: {fileID: 8300000, guid: 6cdc10470227f4a21a8e08e9bbfa6c17, type: 3}
+  - note: 1
+    stringId: 2
+    fretId: 11
+    sound: {fileID: 8300000, guid: 01d8328aca69c49b182f1c3781f6d6d7, type: 3}
+  - note: 2
+    stringId: 2
+    fretId: 12
+    sound: {fileID: 8300000, guid: b7f735266b497421d8c5293cf05969a3, type: 3}
+  - note: 3
+    stringId: 2
+    fretId: 13
+    sound: {fileID: 8300000, guid: da8823e85a2024eaab30ae0a8b92b7be, type: 3}
+  - note: 4
+    stringId: 2
+    fretId: 14
+    sound: {fileID: 8300000, guid: 67d4c6807a5da4537aa96e625e816ca1, type: 3}
+  - note: 5
+    stringId: 2
+    fretId: 15
+    sound: {fileID: 8300000, guid: 440b1c9110352493fa28fff3c48ed409, type: 3}
+  - note: 6
+    stringId: 2
+    fretId: 16
+    sound: {fileID: 8300000, guid: f61f97962138d4a33bbe49fbd239fead, type: 3}
+  - note: 7
+    stringId: 2
+    fretId: 17
+    sound: {fileID: 8300000, guid: a43e6fbada07e423cbd8f3fa822f0d6f, type: 3}
+  - note: 8
+    stringId: 2
+    fretId: 18
+    sound: {fileID: 8300000, guid: 023ad60ff9f9646969b5340e8805c4c8, type: 3}
+  - note: 9
+    stringId: 2
+    fretId: 19
+    sound: {fileID: 8300000, guid: b9fd1dc96f3ec4efd967768d52574e40, type: 3}
+  - note: 10
+    stringId: 2
+    fretId: 20
+    sound: {fileID: 8300000, guid: 71c752a2ccf704b6fb136d1745f3528a, type: 3}
+  - note: 7
+    stringId: 3
+    fretId: 0
+    sound: {fileID: 8300000, guid: eccb19b08a6aa4cfa8bba95ae3ab7200, type: 3}
+  - note: 8
+    stringId: 3
+    fretId: 1
+    sound: {fileID: 8300000, guid: be67cc57a39024349b39735252af1ecc, type: 3}
+  - note: 9
+    stringId: 3
+    fretId: 2
+    sound: {fileID: 8300000, guid: 591f6eacb8ec549daa53c33f7f987b36, type: 3}
+  - note: 10
+    stringId: 3
+    fretId: 3
+    sound: {fileID: 8300000, guid: 15e09f853664a433c96882577b6cd267, type: 3}
+  - note: 11
+    stringId: 3
+    fretId: 4
+    sound: {fileID: 8300000, guid: a8b7476e13cc94d7e96848f201675320, type: 3}
+  - note: 0
+    stringId: 3
+    fretId: 5
+    sound: {fileID: 8300000, guid: 44b1a798260f44186a742dbb355620ad, type: 3}
+  - note: 1
+    stringId: 3
+    fretId: 6
+    sound: {fileID: 8300000, guid: 1e5e7893499204f1f8c25bd1cb48c8ea, type: 3}
+  - note: 2
+    stringId: 3
+    fretId: 7
+    sound: {fileID: 8300000, guid: c9effc9432e4645589be9c7852f7c8f2, type: 3}
+  - note: 3
+    stringId: 3
+    fretId: 8
+    sound: {fileID: 8300000, guid: 0f37a505690f94c059face6eb8c73dff, type: 3}
+  - note: 4
+    stringId: 3
+    fretId: 9
+    sound: {fileID: 8300000, guid: aae35558b99684219b27ef28b99a80d0, type: 3}
+  - note: 5
+    stringId: 3
+    fretId: 10
+    sound: {fileID: 8300000, guid: 9d3949a0a3f5d42aabeb6c234f5c5da9, type: 3}
+  - note: 6
+    stringId: 3
+    fretId: 11
+    sound: {fileID: 8300000, guid: 6a7acdedc3a374a5abc074731c80b864, type: 3}
+  - note: 7
+    stringId: 3
+    fretId: 12
+    sound: {fileID: 8300000, guid: 4132814c57a3d475cae6f0184b94c2f4, type: 3}
+  - note: 8
+    stringId: 3
+    fretId: 13
+    sound: {fileID: 8300000, guid: 40146e9936f1c4b02ab9fe79f14bfa58, type: 3}
+  - note: 9
+    stringId: 3
+    fretId: 14
+    sound: {fileID: 8300000, guid: 606e79ddfb9b14827929207dc733f8d6, type: 3}
+  - note: 10
+    stringId: 3
+    fretId: 15
+    sound: {fileID: 8300000, guid: 2d19cf146eba44cf88f21c2bee1ca46e, type: 3}
+  - note: 11
+    stringId: 3
+    fretId: 16
+    sound: {fileID: 8300000, guid: e8375de9ccd02495b8527889fad58b37, type: 3}
+  - note: 0
+    stringId: 3
+    fretId: 17
+    sound: {fileID: 8300000, guid: 29384564539244d79ab00f4f173c5302, type: 3}
+  - note: 1
+    stringId: 3
+    fretId: 18
+    sound: {fileID: 8300000, guid: 7dfad5de17a994c8fbbeb0b92f8ba468, type: 3}
+  - note: 2
+    stringId: 3
+    fretId: 19
+    sound: {fileID: 8300000, guid: 846ff52183c1442a1bfd6afc78d7d6ec, type: 3}
+  - note: 3
+    stringId: 3
+    fretId: 20
+    sound: {fileID: 8300000, guid: 10323aafbea0b46b4a64df889fd07b34, type: 3}
+--- !u!4 &229817062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229817060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3897231, y: -1.7743725, z: -0.0986522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519420028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519420032}
+  - component: {fileID: 519420031}
+  - component: {fileID: 519420029}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &519420029
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+--- !u!20 &519420031
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &519420032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
