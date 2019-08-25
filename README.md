@@ -1,2 +1,2 @@
-# Hear The Bass
+# Ear The Bass
 Simple mobile app to train ears on notes and chords
